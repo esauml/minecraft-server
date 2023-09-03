@@ -3,6 +3,7 @@ version: "3.8"
 services:
   java:
     image: itzg/minecraft-server
+    container_name: minecraft-java-server
     tty: true
     stdin_open: true
     ports:
@@ -17,6 +18,7 @@ services:
   
   win:
     image: itzg/minecraft-bedrock-server
+    container_name: minecraft-bedrock-server
     tty: true
     stdin_open: true
     ports:
@@ -25,3 +27,7 @@ services:
       EULA: "TRUE"
     volumes:
       - ./windows-server:/data
+
+volumes:
+  java-server:
+  windows-server:
