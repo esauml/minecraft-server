@@ -1,1 +1,0 @@
-ssh -R 1593:localhost:25565 serveo.net
